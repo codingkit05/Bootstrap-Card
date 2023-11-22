@@ -1,0 +1,88 @@
+/*=========general=========*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-image: url('./image/blob-scene-haikei.svg');
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*==========card==========*/
+.card {
+    height: 25rem;
+    width: 18rem;
+    font-family: "Roboto", sans-serif;
+    border: dashed 4px #fdab3b !important;
+    border-radius: 15px !important;
+}
+
+.card .card-body h5 {
+    color: #231e41;
+}
+
+.card .card-body p {
+    color: #555;
+    line-height: 22px;
+    font-size: 13px;
+}
+
+.card .card-image-gradient {
+    position: relative;
+}
+
+.card .card-image-gradient::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    opacity: 0.7;
+    display: inline-block;
+    background: linear-gradient( to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF000000', endColorstr='#00000000', GradientType=0);
+    transition: 0.5s;
+}
+
+.card:hover .card-image-gradient::after {
+    height: 75%;
+}
+
+.card .card-image-gradient img {
+    transition: all 0.3s ease-in;
+}
+
+.card:hover .card-image-gradient img {
+    transform: scale(1.2);
+}
+
+.card .card-body .pack-detail svg {
+    color: #fdab3b;
+    margin-left: -5px;
+    margin-top: 6.4px;
+}
+
+.card .card-body .pack-detail h3 {
+    color: #fdab3b;
+    margin-top: 4px;
+}
+
+.card .card-body .pack-detail a {
+    text-decoration: none;
+}
+
+.card .card-body .pack-detail a button {
+    border-radius: 50px;
+    background-color: black;
+    border: solid 3.2px #fdab3b;
+    margin-top: -3px;
+    margin-left: 18.86px;
+    transition: 0.2s;
+    transform: scale(1.07);
+}
+
+.card .card-body .pack-detail a button:hover {
+    transform: scale(1);
+}
